@@ -1,0 +1,12 @@
+{
+    "name":         "werkint-gulp-task-watch",
+    "version":      "0.0.1",
+    "dependencies": {
+        "browser-sync": "^2.9.11",
+        "lodash": "^3.10.1",
+        "q": "^1.4.1"
+    },
+    "engines":      {
+        "node": "=>4.2.1"
+    }
+}

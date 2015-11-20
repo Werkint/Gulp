@@ -1,0 +1,23 @@
+{
+  "name": "werkint-gulp",
+  "version":      "0.0.1",
+  "dependencies": {
+    "babel-core": "^6.1.20",
+    "babel-plugin-add-module-exports": "0.0.4",
+    "babel-plugin-transform-es2015-modules-amd": "^6.1.18",
+    "babel-preset-es2015": "^6.1.18",
+    "deasync": "^0.1.4",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7",
+    "lodash": "^3.10.1",
+    "q": "^1.4.1",
+    "werkint-gulp-driver-symfony": "^0.0.1",
+    "werkint-gulp-dumper": "^0.0.1",
+    "werkint-gulp-pipe-script": "^0.0.1",
+    "werkint-gulp-pipe-stylesheet": "^0.0.1",
+    "werkint-gulp-task-bower": "^0.0.1",
+    "werkint-gulp-task-dump": "^0.0.1",
+    "werkint-gulp-task-server": "^0.0.1",
+    "werkint-gulp-task-watch": "^0.0.1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "name":         "werkint-gulp-dumper",
+    "version":      "0.0.1",
+    "dependencies": {
+        "gulp": "^3.9.0",
+        "gulp-if": "^2.0.0",
+        "gulp-util": "^3.0.7",
+        "lodash": "^3.10.1",
+        "merge-stream": "^1.0.0",
+        "multipipe": "^0.2.1",
+        "q": "^1.4.1",
+        "through2": "^2.0.0"
+    },
+    "engines":      {
+        "node": "=>4.2.1"
+    }
+}

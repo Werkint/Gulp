@@ -1,0 +1,22 @@
+{
+    "name":         "werkint-gulp-task-bower",
+    "version":      "0.0.1",
+    "dependencies": {
+        "glob": "^6.0.1",
+        "gulp-bower": "0.0.10",
+        "gulp-bower-normalize": "^1.0.6",
+        "gulp-clean": "^0.3.1",
+        "gulp-if": "^2.0.0",
+        "gulp-ignore": "^2.0.1",
+        "gulp-util": "^3.0.7",
+        "lodash": "^3.10.1",
+        "main-bower-files": "^2.9.0",
+        "merge-stream": "^1.0.0",
+        "multipipe": "^0.2.1",
+        "q": "^1.4.1",
+        "stream-consume": "^0.1.0"
+    },
+    "engines":      {
+        "node": "=>4.2.1"
+    }
+}

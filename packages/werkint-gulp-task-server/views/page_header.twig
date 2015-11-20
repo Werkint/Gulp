@@ -1,0 +1,14 @@
+{% extends 'layout.twig' %}
+
+{% block bodyClass %}header{% endblock %}
+
+{% block body %}
+  <div class="page-header">
+    <h1>{{ page.meta.title }}</h1>
+    <h2>{{ view.title }}</h2>
+
+    <div class="back">
+      <a href="/" target="_top">Назад</a>
+    </div>
+  </div>
+{% endblock %}

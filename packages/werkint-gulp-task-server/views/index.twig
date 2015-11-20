@@ -1,0 +1,9 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <div class="wrapper">
+    <h1>Список шаблонов</h1>
+
+    {% include 'list.twig' with {'pages': pages} %}
+  </div>
+{% endblock %}

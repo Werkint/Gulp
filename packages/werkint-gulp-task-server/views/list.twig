@@ -1,0 +1,12 @@
+<ul>
+  {% for page in pages %}
+    <li>{{ page.name }}
+      <br/><b>{{ page.meta.title }}</b>
+      <ul>
+        {% for view in page.views %}
+          <li><a href="{{ view.url }}">{{ view.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
