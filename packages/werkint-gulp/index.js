@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (context, callback) {
+module.exports = function (context) {
   /**
    * For es6 support
    * @see https://babeljs.io/docs/usage/require/
@@ -11,9 +11,11 @@ module.exports = function (context, callback) {
     presets:    ['es2015'],
   });
 
-  var driver = require('markup-driver-symfony').default
+  var driver = require('werkint-gulp-driver-symfony').default
     , App = require('./app').default;
 
-  new App(driver, context, callback);
+  require('deasync')(function(callback){
+    new App(driver, context, callback);
+  })();
 };
 

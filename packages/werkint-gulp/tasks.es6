@@ -3,10 +3,10 @@
 import _ from 'lodash';
 import Q from 'q';
 
-import taskDump from 'markup-task-dump';
-import taskWatch from 'markup-task-watch';
-import taskServer from 'markup-task-server';
-import taskBower from 'markup-task-bower';
+import taskDump from 'werkint-gulp-task-dump';
+import taskWatch from 'werkint-gulp-task-watch';
+import taskServer from 'werkint-gulp-task-server';
+import taskBower from 'werkint-gulp-task-bower';
 
 export default app => {
   let ret = {

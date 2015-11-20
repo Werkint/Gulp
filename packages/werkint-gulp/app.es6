@@ -4,7 +4,7 @@ import Q from 'q';
 import fs from 'fs';
 import gulp from 'gulp';
 import EventEmitter from 'events';
-import {Dumper, Transformer} from 'markup-dumper'
+import {Dumper, Transformer} from 'werkint-gulp-dumper';
 import tasksLoader from './tasks';
 import pipesLoader from './pipes';
 
