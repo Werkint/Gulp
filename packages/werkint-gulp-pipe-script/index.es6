@@ -17,8 +17,10 @@ export default () => {
       return gulpUtil.noop()
         .pipe(gulpif(file => path.extname(file.path) === '.es6', // TODO: to options
           babel({
-            presets: ['es2015'],
-            plugins: plugins,
+            stage: 0,
+            modules: 'amd', // TODO: remove
+            //presets: ['es2015'], TODO: babel 6
+            //plugins: plugins,
           })
         ));
     })
