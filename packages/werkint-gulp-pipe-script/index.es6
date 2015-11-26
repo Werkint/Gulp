@@ -7,14 +7,18 @@ import babel from 'gulp-babel';
 import gulpif from 'gulp-if'
 import path from 'path';
 
-export default function () {
+export default () => {
   return Q.promise(resolve => {
     resolve(config => {
+      let plugins = config.babelPlugins || [
+          'add-module-exports',
+          'transform-es2015-modules-amd',
+        ];
       return gulpUtil.noop()
         .pipe(gulpif(file => path.extname(file.path) === '.es6', // TODO: to options
           babel({
             presets: ['es2015'],
-            plugins: ['add-module-exports', 'transform-es2015-modules-amd'],
+            plugins: plugins,
           })
         ));
     })

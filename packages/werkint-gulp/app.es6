@@ -111,7 +111,7 @@ export default class App {
       let twigGlobals = require(context.configDir + '/twigGlobals')
         , config = require(context.configDir + '/config');
       this.config = config;
-      _.extend(config, context);
+      _.merge(config, context);
 
       config.server.listenPath = 'http://' + config.server.host + ':' + config.server.port;
 
