@@ -1,0 +1,23 @@
+{
+  "name": "werkint-gulp-task-sprites",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Werkint/Gulp/tree/master/packages/werkint-gulp-task-sprites"
+  },
+  "license": "GPL",
+  "main": "index.js",
+  "keywords": [
+    "gulp"
+  ],
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-image-resize": "^0.7.1",
+    "handlebars": "^4.0.5",
+    "lodash": "^3.10.1",
+    "q": "^1.4.1"
+  },
+  "engines": {
+    "node": "=>4.2.1"
+  }
+}

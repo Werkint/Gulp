@@ -1,6 +1,6 @@
 {
   "name": "werkint-gulp",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/Werkint/Gulp/tree/master/packages/werkint-gulp"
@@ -19,13 +19,15 @@
     "gulp-util": "^3.0.7",
     "lodash": "^3.10.1",
     "q": "^1.4.1",
-    "werkint-gulp-driver-symfony": "^0.0.1",
+    "werkint-gulp-driver-symfony": "^0.0.2",
     "werkint-gulp-dumper": "^0.0.1",
     "werkint-gulp-pipe-script": "^0.0.4",
     "werkint-gulp-pipe-stylesheet": "^0.0.2",
+    "werkint-gulp-pipe-twig": "^0.0.1",
     "werkint-gulp-task-bower": "^0.0.1",
     "werkint-gulp-task-dump": "^0.0.1",
     "werkint-gulp-task-server": "^0.0.1",
-    "werkint-gulp-task-watch": "^0.0.1"
+    "werkint-gulp-task-watch": "^0.0.1",
+    "werkint-gulp-task-sprites": "^0.0.1"
   }
 }

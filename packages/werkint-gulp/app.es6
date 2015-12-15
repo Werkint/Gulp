@@ -90,6 +90,9 @@ export default class App {
       // Скачивает и собирает пакеты bower
       gulp.task('bower', this.tasks.bower);
 
+      // Компилирует спрайты
+      gulp.task('sprites', this.tasks.sprites);
+
       // Слушает изменения шаблонов, стилей и т.д.
       gulp.task('watch', dumpDep, this.tasks.watch);
 

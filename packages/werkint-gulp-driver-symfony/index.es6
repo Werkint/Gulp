@@ -77,6 +77,29 @@ class Driver {
     return list;
   }
 
+  get sprites() {
+    var list = [];
+
+    _.each(this.bundles, bundle => {
+      try {
+        let path = bundle.path + '/Resources/sprites';
+        _.each(fs.readdirSync(path), file => {
+          list.push({
+            src:  path + '/' + file + '/**/*.png',
+            name: bundle.name + '/' + file,
+            size: {
+              width:  92,
+              height: 92,
+            },
+          });
+        })
+      } catch (e) {
+      }
+    });
+
+    return list;
+  }
+
   rebuildBundles(path) {
     return Q.promise((resolve, reject) => {
       fs.readFile(path, (err, result) => {
@@ -118,6 +141,8 @@ class Driver {
         path:     bundle.path + '/Resources/styles',
       };
     }));
+
+    this.app.config.sprites = this.app.config.sprites.concat(this.sprites);
   }
 
   rebuildFiles() {
@@ -174,7 +199,8 @@ class Driver {
       } else {
         ret.path = [
           ret.base + '/' + ret.glob,
-          '!' + root + '/**/*.raw/**/*.*'
+          '!' + root + '/**/*.raw/**/*.*',
+          '!' + root + '/**/_old/**/*.*'
         ];
       }
 
@@ -183,13 +209,11 @@ class Driver {
   }
 
   static __bundleRename(path) {
-    let reg = /^__root(\/(.+))?$/;
-    path.dirname = path.dirname.match(reg) ?
-      path.dirname.replace(reg, '$2') :
-    this.context.bundle.name + '/' + path.dirname;
-
-    if (this.context.type === 'template') {
-      path.dirname = this.context.bundle.name + '/template/' + path.dirname;
+    if (this.context.type !== 'stylesheet') {
+      let reg = /^__root(\/(.+))?$/;
+      path.dirname = path.dirname.match(reg) ?
+        path.dirname.replace(reg, '$2') :
+      this.context.bundle.name + '/' + path.dirname;
     }
   }
 }
