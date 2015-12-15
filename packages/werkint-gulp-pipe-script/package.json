@@ -1,6 +1,6 @@
 {
   "name": "werkint-gulp-pipe-script",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/Werkint/Gulp/tree/master/packages/werkint-gulp"

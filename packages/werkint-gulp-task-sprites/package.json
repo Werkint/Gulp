@@ -1,6 +1,6 @@
 {
   "name": "werkint-gulp-task-sprites",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/Werkint/Gulp/tree/master/packages/werkint-gulp-task-sprites"
@@ -13,6 +13,7 @@
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-image-resize": "^0.7.1",
+    "gulp.spritesmith": "^6.0.0",
     "handlebars": "^4.0.5",
     "lodash": "^3.10.1",
     "q": "^1.4.1"

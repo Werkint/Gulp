@@ -1,0 +1,104 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'publish' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/mnt/projects/obmenat/Gulp/packages/werkint-gulp',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/bogdan/.npm/werkint-gulp/0.0.10/package.tgz not in flight; packing
+9 verbose tar pack [ '/home/bogdan/.npm/werkint-gulp/0.0.10/package.tgz',
+9 verbose tar pack   '/mnt/projects/obmenat/Gulp/packages/werkint-gulp' ]
+10 verbose tarball /home/bogdan/.npm/werkint-gulp/0.0.10/package.tgz
+11 verbose folder /mnt/projects/obmenat/Gulp/packages/werkint-gulp
+12 info prepublish werkint-gulp@0.0.10
+13 verbose addLocalTarball adding from inside cache /home/bogdan/.npm/werkint-gulp/0.0.10/package.tgz
+14 silly cache afterAdd werkint-gulp@0.0.10
+15 verbose afterAdd /home/bogdan/.npm/werkint-gulp/0.0.10/package/package.json not in flight; writing
+16 verbose afterAdd /home/bogdan/.npm/werkint-gulp/0.0.10/package/package.json written
+17 silly publish { name: 'werkint-gulp',
+17 silly publish   version: '0.0.10',
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'https://github.com/Werkint/Gulp/tree/master/packages/werkint-gulp' },
+17 silly publish   license: 'GPL',
+17 silly publish   main: 'index.js',
+17 silly publish   keywords: [ 'gulp' ],
+17 silly publish   dependencies:
+17 silly publish    { 'babel-core': '^6.3.17',
+17 silly publish      deasync: '^0.1.4',
+17 silly publish      gulp: '^3.9.0',
+17 silly publish      'gulp-util': '^3.0.7',
+17 silly publish      lodash: '^3.10.1',
+17 silly publish      q: '^1.4.1',
+17 silly publish      'werkint-gulp-driver-symfony': '^0.0.2',
+17 silly publish      'werkint-gulp-dumper': '^0.0.1',
+17 silly publish      'werkint-gulp-pipe-script': '^0.0.5',
+17 silly publish      'werkint-gulp-pipe-stylesheet': '^0.0.2',
+17 silly publish      'werkint-gulp-pipe-twig': '^0.0.1',
+17 silly publish      'werkint-gulp-task-bower': '^0.0.1',
+17 silly publish      'werkint-gulp-task-dump': '^0.0.1',
+17 silly publish      'werkint-gulp-task-server': '^0.0.1',
+17 silly publish      'werkint-gulp-task-sprites': '^0.0.2',
+17 silly publish      'werkint-gulp-task-watch': '^0.0.1' },
+17 silly publish   readme: 'ERROR: No README data found!',
+17 silly publish   _id: 'werkint-gulp@0.0.10',
+17 silly publish   scripts: {},
+17 silly publish   _shasum: '9b39f6ecc45f6a018da0bc5c7288f30dd6dadd26',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name werkint-gulp
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/werkint-gulp
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /home/bogdan/.npm/werkint-gulp/0.0.10/package.tgz
+25 verbose request uri https://registry.npmjs.org/werkint-gulp
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 4:18:19 AM
+28 verbose request using bearer token for auth
+29 verbose request id 844939de2bcaeab0
+30 http request PUT https://registry.npmjs.org/werkint-gulp
+31 http 403 https://registry.npmjs.org/werkint-gulp
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '96',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Tue, 15 Dec 2015 02:18:28 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-fra1242-FRA',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1450145907.491948,VS0,VE1121' }
+33 verbose request invalidating /home/bogdan/.npm/registry.npmjs.org/werkint-gulp on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: "You cannot publish over the previously published version 0.0.10." : werkint-gulp
+35 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1063:14)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 403
+37 verbose pkgid werkint-gulp
+38 verbose cwd /mnt/projects/obmenat/Gulp/packages/werkint-gulp
+39 error Linux 3.13.0-68-generic
+40 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish"
+41 error node v4.2.2
+42 error npm  v2.14.7
+43 error code E403
+44 error "You cannot publish over the previously published version 0.0.10." : werkint-gulp
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]

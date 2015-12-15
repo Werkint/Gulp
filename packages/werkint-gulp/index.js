@@ -8,13 +8,14 @@ module.exports = function (context) {
   require('babel-core/register')({
     ignore:     false,
     extensions: ['.es6'],
-    //presets:    ['es2015'], TODO: Babel 6
+    presets:    ['es2015'],
+    plugins:    ['add-module-exports'],
   });
 
   var driver = require('werkint-gulp-driver-symfony')
     , App = require('./app');
 
-  require('deasync')(function(callback){
+  require('deasync')(function (callback) {
     new App(driver, context, callback);
   })();
 };
