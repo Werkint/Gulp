@@ -151,6 +151,10 @@ module.exports = function (opt) {
     }, opt);
     var data;
     try {
+      // TODO: remove, жуткий костыль
+      Twig.extend(Twig => {
+        delete Twig.Templates.registry[file.relative];
+      });
       var template = twig({id: file.relative, data: file.contents.toString('utf8'), allowInlineIncludes: true});
       data = template.compile(options);
     } catch (err) {

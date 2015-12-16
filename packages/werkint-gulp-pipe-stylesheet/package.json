@@ -1,6 +1,6 @@
 {
   "name": "werkint-gulp-pipe-stylesheet",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/Werkint/Gulp/tree/master/packages/werkint-gulp"
@@ -11,6 +11,7 @@
     "gulp"
   ],
   "dependencies": {
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.1.0",
     "lodash": "^3.10.1",
     "q": "^1.4.1"

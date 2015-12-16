@@ -7,9 +7,14 @@ import glob from 'glob';
 
 let types = [ // TODO: remove
   {
+    root:   true,
     name:   'stylesheet',
     prefix: 'styles',
     ext:    ['css', 'less', 'sass', 'scss'],
+  }, {
+    name:   'stylesheet',
+    prefix: 'frontend',
+    ext:    ['css'],
   }, {
     name:   'script',
     prefix: 'frontend',
@@ -188,6 +193,7 @@ class Driver {
         type: type.name,
 
         context: {
+          root:   type.root,
           type:   type.name,
           bundle: bundle,
           rename: Driver.__bundleRename,
@@ -209,7 +215,7 @@ class Driver {
   }
 
   static __bundleRename(path) {
-    if (this.context.type !== 'stylesheet') {
+    if (!this.context.root) {
       let reg = /^__root(\/(.+))?$/;
       path.dirname = path.dirname.match(reg) ?
         path.dirname.replace(reg, '$2') :

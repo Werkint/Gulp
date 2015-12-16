@@ -15,7 +15,7 @@ package.json
         "babel-preset-stage-0":                      "^6.3.13",
 
         "gulp":                                      "^3.9.0",
-        "werkint-gulp":                              "^0.0.11"
+        "werkint-gulp":                              "^0.0.12"
     }
 }
 ````
