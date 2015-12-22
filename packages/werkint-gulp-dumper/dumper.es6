@@ -1,5 +1,4 @@
 'use strict';
-
 import _ from 'lodash';
 import Q from 'q';
 import gulp from 'gulp';
@@ -10,14 +9,14 @@ import rename from './rename';
 
 let types = [ // TODO: remove
   {
-    name:   'stylesheet',
-    ext:    ['css', 'less', 'sass', 'scss'],
+    name: 'stylesheet',
+    ext:  ['css', 'less', 'sass', 'scss'],
   }, {
-    name:   'script',
-    ext:    ['js', 'es6'],
-  },  {
-    name:   'image',
-    ext:    ['jpg', 'jpeg', 'gif', 'svg', 'png'],
+    name: 'script',
+    ext:  ['js', 'es6'],
+  }, {
+    name: 'image',
+    ext:  ['jpg', 'jpeg', 'gif', 'svg', 'png'],
   }, {
     name:   'template',
     prefix: 'views',
@@ -45,8 +44,29 @@ export default class Dumper {
     }
 
     if (!context.type) {
-      context.type = 'raw';
+      context.type = this.getTypeOfFile(file.path).name;
     }
+  }
+
+  getTypeOfFile(path) {
+    // TODO: это плохо
+    let ext   = path.split('.').pop()
+      , typer = null;
+    _.each(types, type => {
+      if (type.ext.indexOf(ext) > -1) {
+        typer = type;
+      }
+    });
+
+    if (!typer) {
+      _.each(types, type => {
+        if (type.name === 'raw') {
+          typer = type;
+        }
+      });
+    }
+
+    return typer;
   }
 
   tagPipe(clb) {

@@ -1,5 +1,4 @@
 'use strict';
-
 import _ from 'lodash';
 import Q from 'q';
 import fs from 'fs'
@@ -82,7 +81,7 @@ let updatePipes = (app, config) => {
     .pipe(gulpIgnore.exclude('**/bower.json'))
     .pipe(normalizer(config));
   config.pipe.isBower = true;
-  app.dumper.pipes.push(config.pipe);
+  app.dumper.pipes.unshift(config.pipe);
 };
 
 let myFunc = (app, config) => {

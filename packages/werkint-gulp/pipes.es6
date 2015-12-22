@@ -1,8 +1,6 @@
 'use strict';
-
 import _ from 'lodash';
 import Q from 'q';
-
 import pipeStylesheet from 'werkint-gulp-pipe-stylesheet';
 import pipeScript from 'werkint-gulp-pipe-script';
 import pipeTwig from 'werkint-gulp-pipe-twig';
