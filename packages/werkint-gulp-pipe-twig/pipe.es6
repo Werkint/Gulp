@@ -103,7 +103,7 @@ Twig.extend(function (Twig) {
     //}
 
     requiredViews = requiredViews.concat(_.map(template.compiliationMetadata, function (file) {
-      return file && file.replace(/^['"]/, '').replace(/['"]$/, '');
+      return file && (file.indexOf('"') > -1 || file.indexOf('\'') > -1) && file.replace(/^['"]/, '').replace(/['"]$/, '');
     }));
 
     /* amd requireds */
