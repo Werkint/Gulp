@@ -1,6 +1,6 @@
 {
   "name": "werkint-gulp",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "repository": {
     "type": "git",
     "url": "https://github.com/Werkint/Gulp/tree/master/packages/werkint-gulp"
@@ -24,7 +24,7 @@
     "werkint-gulp-pipe-twig": "^0.0.4",
     "werkint-gulp-task-bower": "^0.0.2",
     "werkint-gulp-task-dump": "^0.0.1",
-    "werkint-gulp-task-server": "^0.0.1",
+    "werkint-gulp-task-server": "^0.0.2",
     "werkint-gulp-task-sprites": "^0.0.2",
     "werkint-gulp-task-watch": "^0.0.1"
   }

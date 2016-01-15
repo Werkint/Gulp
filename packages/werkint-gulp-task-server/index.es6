@@ -1,5 +1,4 @@
 'use strict';
-
 import Q from 'q';
 import Twig from 'twig';
 import express from 'express';
@@ -13,14 +12,14 @@ export default context => Q.promise(resolve => {
     app.use(bodyParser.urlencoded({extended: true}));
     app.use(bodyParser.json());
     app.use('/__markup', express.static(__dirname + '/public'));
-    app.use('/static', express.static(config.paths.web));
+    app.use(config.assetPrefix, express.static(config.paths.web));
     app.set('views', __dirname + '/views');
     app.set('view engine', 'twig');
     app.set('twig options', {
       //autoescape: true,
     });
 
-    require('./app.js')(config)
+    require('./app')(config)
       .then(function (appIn) {
         context.emitter.on('reload', () => appIn.loadTwig());
 
