@@ -8,9 +8,17 @@ import BrowerSync from 'browser-sync';
 
 export default app => Q.promise(resolve => {
   resolve(() => Q.promise((resolve, reject) => {
-    let emitter = new EventEmitter();
+    // TODO: to events
+    const emitter = new EventEmitter();
     emitter.on('change', (event, glob) => {
-      app.dumper.getPipeFromFile(event.path, glob)
+      let pipe;
+      if (glob.type === 'stylesheet') {
+        pipe = app.dumper.getPipe([glob], true);
+        console.log('Refreshing all stylesheets in current glob');
+      } else {
+        pipe = app.dumper.getPipeFromFile(event.path, glob);
+      }
+      pipe
         .pipe(app.transform())
         .pipe(app.save())
         .on('error', reject)
@@ -33,7 +41,7 @@ export default app => Q.promise(resolve => {
 
     if (app.config.browserSync) {
       let browserSync = BrowerSync.create()
-        , config = app.config.browserSync;
+        , config      = app.config.browserSync;
       browserSync.init({
         ui:             false,
         port:           config.port,

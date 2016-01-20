@@ -1,18 +1,18 @@
 {
-    "name":         "werkint-gulp-task-watch",
-    "version":      "0.0.1",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Werkint/Gulp/tree/master/packages/werkint-gulp"
-    },
-    "license": "GPL",
-    "main": "index.js",
-    "keywords": [
-        "gulp"
-    ],
-    "dependencies": {
-        "browser-sync": "^2.9.11",
-        "lodash": "^3.10.1",
-        "q": "^1.4.1"
-    }
+  "name": "werkint-gulp-task-watch",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Werkint/Gulp/tree/master/packages/werkint-gulp"
+  },
+  "license": "GPL",
+  "main": "index.js",
+  "keywords": [
+    "gulp"
+  ],
+  "dependencies": {
+    "browser-sync": "^2.9.11",
+    "lodash": "^3.10.1",
+    "q": "^1.4.1"
+  }
 }

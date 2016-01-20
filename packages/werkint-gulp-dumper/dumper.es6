@@ -77,8 +77,8 @@ export default class Dumper {
     });
   }
 
-  getPipe(globs) {
-    let pipes = this.mappedPipes.concat(..._.map(globs, glob => {
+  getPipe(globs, ignoreMapped) {
+    let pipes = (ignoreMapped ? [] : this.mappedPipes).concat(..._.map(globs, glob => {
       return gulp.src(glob.path, {base: glob.base})
         .pipe(this.tagPipe(file => {
           file.context = glob.context;
