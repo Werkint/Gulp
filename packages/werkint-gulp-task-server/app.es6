@@ -9,8 +9,8 @@ const parseBundle = function (name) {
   return name.match(/[A-Z][a-z]+/g).slice(0, -1).join('-').toLowerCase();
 };
 
-const App = function (data, views, twigGlobals) {
-  this.twigGlobals = twigGlobals;
+const App = function (data, views, twigConfig) {
+  this.twigConfig = twigConfig;
   this.data = {};
   this.pages = {};
   var loadData = (bundleName, prefixIn, tree) => {
@@ -149,8 +149,9 @@ App.prototype.loadTwig = function () {
   this.twigStore = [];
   this.twig = Twig;
 
-  this.twig.extendFunction('asset', val => '/' + val);
-  this.twig.extendFunction('path', val => '#');
+  _.each(this.twigConfig.functions, (val, key) => {
+    this.twig.extendFunction(key, val)
+  });
 
   _.each(this.views, (view, name) => {
     // TODO: remove, жуткий костыль
@@ -193,7 +194,7 @@ App.prototype.parsePage = function (pageIn, key) {
 };
 
 App.prototype.buildViewConfig = function (view) {
-  return _.extend({}, this.twigGlobals, view.data);
+  return _.extend({}, this.twigConfig.globals, view.data);
 };
 
 module.exports = function (config) {
@@ -207,8 +208,10 @@ module.exports = function (config) {
     .spread(function (data, views) {
       return new App(
         data,
-        views,
-        config.twigGlobals
+        views, {
+          globals: config.twigGlobals,
+          functions: config.server.twigFunctions,
+        }
       );
     });
 };
