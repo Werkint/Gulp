@@ -1,6 +1,5 @@
 'use strict';
 
-import _ from 'lodash';
 import Q from 'q';
 import gulpUtil from 'gulp-util';
 import babel from 'gulp-babel';

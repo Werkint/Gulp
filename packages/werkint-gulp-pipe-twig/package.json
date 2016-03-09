@@ -1,6 +1,6 @@
 {
   "name": "werkint-gulp-pipe-twig",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/Werkint/Gulp/tree/master/packages/werkint-gulp-pipe-twig"
@@ -17,8 +17,5 @@
     "q": "^1.4.1",
     "through2": "^2.0.0",
     "twig": "^0.8.6"
-  },
-  "engines": {
-    "node": "=>4.2.1"
   }
 }
