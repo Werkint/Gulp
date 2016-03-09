@@ -1,6 +1,6 @@
 {
   "name": "werkint-gulp",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "repository": {
     "type": "git",
     "url": "https://github.com/Werkint/Gulp/tree/master/packages/werkint-gulp"
@@ -19,7 +19,7 @@
     "q": "^1.4.1",
     "werkint-gulp-driver-symfony": "^0.0.3",
     "werkint-gulp-dumper": "^0.0.3",
-    "werkint-gulp-pipe-script": "^0.0.7",
+    "werkint-gulp-pipe-script": "^0.0.8",
     "werkint-gulp-pipe-stylesheet": "^0.0.4",
     "werkint-gulp-pipe-twig": "^0.0.5",
     "werkint-gulp-task-bower": "^0.0.2",
